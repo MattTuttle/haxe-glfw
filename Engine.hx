@@ -16,12 +16,12 @@ class Engine
 		var monitor = null;
 		window = GLFW.createWindow(640, 480, "My Window", monitor, window);
 		GLFW.makeContextCurrent(window);
-		GLFW.setWindowRefreshCallback(window, new cpp.Function(onWindowRefresh));
+		GLFW.setWindowRefreshCallback(window, cpp.Function.fromStaticFunction(onWindowRefresh));
 		GLFW.swapInterval(1);
 		GL.clearColor(0.3, 0.3, 0.3, 1);
 	}
 
-	private function onWindowRefresh(window:Pointer<Window>):Void
+	@:void private static function onWindowRefresh(window:cpp.RawPointer<Window>):Void
 	{
 		trace("refresh");
 	}

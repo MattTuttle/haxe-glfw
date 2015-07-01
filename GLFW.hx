@@ -62,7 +62,7 @@ extern class GLFW
 	@:native("glfwSetGamma") static public function setGamma(monitor:Pointer<Monitor>, gamma:Float):Void;
 
 	@:native("glfwSetWindowPosCallback") static public function setWindowPosCallback(window:Pointer<Window>, callback:Callable<Pointer<Window>->Int->Int->Void>):Void;
-	@:native("glfwSetWindowRefreshCallback") static public function setWindowRefreshCallback(window:Pointer<Window>, callback:Callable<Pointer<Window>->Void>):Void;
+	@:native("glfwSetWindowRefreshCallback") static public function setWindowRefreshCallback(window:Pointer<Window>, callback:Callable<cpp.RawPointer<Window>->Void>):Void;
 
 	@:native("glfwGetClipboardString") static public function getClipboardString(window:Pointer<Window>):ConstCharStar;
 	@:native("glfwSetClipboardString") static public function setClipboardString(window:Pointer<Window>, string:ConstCharStar):Void;
