@@ -1,0 +1,16 @@
+-lib hxcpp
+-D osx
+-debug
+
+--each
+
+-cpp out
+-main Host
+-D scriptable
+
+--next
+
+-cpp main.cppia
+-main Main
+-D cppia
+-cmd out/Host-debug main.cppia

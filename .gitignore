@@ -1,0 +1,5 @@
+out/
+*.cppia
+export_classes.info
+.DS_Store
+Thumbs.db
